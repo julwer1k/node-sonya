@@ -1,0 +1,20 @@
+@import "../mixins";
+
+.navbar-end {
+	a {
+		position: relative;
+		text-align: center;
+		font-family: "Rubik", sans-serif;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 150%;
+
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+}
+
+.navbar-item {
+	font-size: 32px;
+	font-family: 'Humnst777 Blk BT', sans-serif;
+}

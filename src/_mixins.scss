@@ -1,0 +1,44 @@
+$tablet-breakpoint: 640px;
+$desktop-breakpoint: 1280px;
+$lg-breakpoint: 1440px;
+
+@mixin hover($_property, $_toValue) {
+	transition: #{$_property} 0.3s;
+	&:hover {
+		#{$_property}: $_toValue;
+	}
+}
+
+@mixin onTablet {
+	@media (min-width: $tablet-breakpoint) {
+		@content;
+	}
+}
+
+@mixin onDesktop {
+	@media (min-width: $desktop-breakpoint) {
+		@content;
+	}
+}
+
+@mixin onLarge {
+	@media (min-width: $lg-breakpoint) {
+		@content;
+	}
+}
+
+@mixin contentPaddingInline() {
+	padding-inline: 20px;
+
+	@include onTablet {
+		padding-inline: 27px;
+	}
+
+	@include onDesktop {
+		padding-inline: 50px;
+	}
+
+	@include onLarge {
+		padding: 0;
+	}
+}

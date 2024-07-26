@@ -1,0 +1,28 @@
+@import "../mixins";
+
+.rules {
+	margin-bottom: 50px;
+
+	&__list {
+		list-style: disc;
+		max-width: max-content;
+		margin: 0 auto;
+	}
+
+
+	&__item {
+		font-family: "ZWAdobeF", sans-serif;
+		font-size: 12px;
+		text-align: left;
+
+		@include onTablet {
+			font-size: 20px;
+		}
+
+		span {
+			text-transform: uppercase;
+			color: red;
+			font-weight: 700;
+		}
+	}
+}
